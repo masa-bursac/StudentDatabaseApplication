@@ -6,10 +6,11 @@ public class Student {
 	private String name;
 	private String surname;
 	private int year;
-	private int id;
+	private String studentId;
 	private int tuitionBalance;
 	private String courses;
-	private int costOfCourse = 600;
+	private static int costOfCourse = 600;
+	private static int id = 1000;
 	
 	public Student() {
 		Scanner in = new Scanner(System.in);
@@ -22,6 +23,13 @@ public class Student {
 		System.out.println("Enter student class level:\n1 - Freshmen\n2 - Sophmore\n3 - Junior\n4 - Senor\nEnter:");
 		this.year = in.nextInt();
 		
-		System.out.println(name + " " + surname + " " + year);
+		setStudentId();
+		
+		System.out.println(name + " " + surname + " " + year + " " + studentId);
+	}
+	
+	private void setStudentId() {
+		id++;
+		this.studentId = year + "" + id;
 	}
 }

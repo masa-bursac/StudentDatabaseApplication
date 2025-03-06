@@ -33,11 +33,23 @@ public class Student {
 	
 	public void enroll() {
 		do {
-			System.out.print("Enter course to enroll (Q to quit): ");
+			System.out.print("Enter course to enroll:\n1 - History 101\n2 - Mathematics 101\n3 - English 101\n4 - Chemistry 101\n5 - Computer Science 101\n0 - Quit");
 			Scanner in = new Scanner(System.in);
-			String course = in.nextLine();
-			if(!course.equals("Q")) {
-				courses += "\n  " + course;
+			int course = in.nextInt();
+			if(course == 1) {
+				courses += "\n  " + "History 101";
+				tuitionBalance += costOfCourse;
+			}else if(course == 2) {
+				courses += "\n  " + "Mathematics 101";
+				tuitionBalance += costOfCourse;
+			}else if(course == 3) {
+				courses += "\n  " + "English 101";
+				tuitionBalance += costOfCourse;
+			}else if(course == 4) {
+				courses += "\n  " + "Chemistry 101";
+				tuitionBalance += costOfCourse;
+			}else if(course == 5) {
+				courses += "\n  " + "Computer Science 101";
 				tuitionBalance += costOfCourse;
 			}
 			else {

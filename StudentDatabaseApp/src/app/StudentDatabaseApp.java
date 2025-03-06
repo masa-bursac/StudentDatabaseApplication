@@ -6,6 +6,7 @@ public class StudentDatabaseApp {
 		Student student = new Student();
 		student.enroll();
 		student.payTuition();
+		System.out.println(student.showInfo());
 	}
 
 }
